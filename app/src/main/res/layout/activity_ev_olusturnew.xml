@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.aylin.ogrencievi2.EvOlusturnew">
+
+    <EditText
+        android:id="@+id/edtEvAdiOlustur"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/edtSifreOlustur"
+        android:layout_alignLeft="@+id/edtSifreOlustur"
+        android:layout_alignStart="@+id/edtSifreOlustur"
+        android:layout_marginBottom="21dp"
+        android:ems="10"
+        android:hint="Ev Adı"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="54dp"
+        tools:layout_editor_absoluteY="200dp" />
+
+    <EditText
+        android:id="@+id/edtEvNickNameOlustur"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/edtEvAdiOlustur"
+        android:layout_alignLeft="@+id/edtSifreOlustur"
+        android:layout_alignStart="@+id/edtSifreOlustur"
+        android:layout_marginBottom="38dp"
+        android:ems="10"
+        android:hint="Ev Nickname"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="54dp"
+        tools:layout_editor_absoluteY="200dp" />
+
+    <EditText
+        android:id="@+id/edtSifreOlustur"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnBaglanOlustur"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="67dp"
+        android:ems="10"
+        android:hint="Şifre"
+        android:inputType="textPassword"
+        tools:layout_editor_absoluteX="54dp"
+        tools:layout_editor_absoluteY="287dp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="139dp"
+        android:layout_height="47dp"
+        android:text="Öğrenci evi"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="103dp"
+        tools:layout_editor_absoluteY="53dp"
+        android:layout_marginTop="33dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/btnBaglanOlustur"
+        android:layout_width="121dp"
+        android:layout_height="59dp"
+        android:background="@color/colorPrimary"
+        android:text="BAĞLAN"
+        tools:layout_editor_absoluteX="115dp"
+        tools:layout_editor_absoluteY="385dp"
+        android:layout_marginBottom="104dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/textView4"
+        android:layout_alignStart="@+id/textView4" />
+
+</RelativeLayout>

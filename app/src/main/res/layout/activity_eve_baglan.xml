@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.aylin.ogrencievi2.EveBaglan">
+
+    <EditText
+        android:id="@+id/edtEvNickNameBaglan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView5"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="38dp"
+        android:ems="10"
+        android:hint="Ev Nickname"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="54dp"
+        tools:layout_editor_absoluteY="200dp" />
+
+    <EditText
+        android:id="@+id/edtEvSifreBaglan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/edtEvNickNameBaglan"
+        android:layout_alignStart="@+id/edtEvNickNameBaglan"
+        android:layout_alignTop="@+id/edtEvNickNameBaglan"
+        android:layout_marginTop="72dp"
+        android:ems="10"
+        android:hint="Şifre"
+        android:inputType="textPassword"
+        tools:layout_editor_absoluteX="54dp"
+        tools:layout_editor_absoluteY="287dp" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="139dp"
+        android:layout_height="47dp"
+        android:text="Öğrenci evi"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="103dp"
+        tools:layout_editor_absoluteY="53dp"
+        android:layout_marginTop="42dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/btnBaglan1"
+        android:layout_width="121dp"
+        android:layout_height="59dp"
+        android:layout_below="@+id/edtEvSifreBaglan"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="96dp"
+        android:background="@color/colorPrimary"
+        android:text="BAĞLAN"
+        tools:layout_editor_absoluteX="115dp"
+        tools:layout_editor_absoluteY="385dp" />
+
+</RelativeLayout>
