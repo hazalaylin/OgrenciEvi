@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -23,7 +22,6 @@ import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.HashMap;
-import java.util.Map;
 
 public class EveBaglan extends AppCompatActivity {
 
@@ -129,7 +127,7 @@ public class EveBaglan extends AppCompatActivity {
                     email = user.getEmail();
 
                 }
-                Users usr = dataSnapshot.getValue(Users.class);
+                Evdeki_Arkadaşlarım.Users usr = dataSnapshot.getValue(Evdeki_Arkadaşlarım.Users.class);
 
                 DatabaseReference DbRefForHomeUsers =Db.getReference(Address);
                 KullaniciModel KM=new KullaniciModel(usr.getAd(),email,usr.getSoyad());

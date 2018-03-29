@@ -45,7 +45,7 @@ public class HOME extends AppCompatActivity
         //ilk açılacak fragment
 
         setTitle("KULLANICI BİLGİLERİ");
-        Fragment1 fragment=new Fragment1();
+        Alisveris_Ekle fragment=new Alisveris_Ekle();
         FragmentTransaction fragmentTransaction=getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.fram,fragment);
         fragmentTransaction.commit();
@@ -91,32 +91,32 @@ public class HOME extends AppCompatActivity
 
 
         if (id == R.id.nav_kullanici) {
-             setTitle("KULLANICI BİLGİLERİ");
-            Fragment1 fragment=new Fragment1();
+             setTitle("ALIŞVERİŞ EKLE");
+            Alisveris_Ekle fragment=new Alisveris_Ekle();
             FragmentTransaction fragmentTransaction=getSupportFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.fram,fragment);
             fragmentTransaction.commit();
         } else if (id == R.id.nav_borç) {
             setTitle("BORÇLARIM");
-            Fragment2 fragment=new Fragment2();
+            Borçlarim fragment=new Borçlarim();
             FragmentTransaction fragmentTransaction=getSupportFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.fram,fragment);
             fragmentTransaction.commit();
         } else if (id == R.id.nav_alacak) {
             setTitle("ALACAKLARIM");
-            Fragment3 fragment=new Fragment3();
+            Alacaklarim fragment=new Alacaklarim();
             FragmentTransaction fragmentTransaction=getSupportFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.fram,fragment);
             fragmentTransaction.commit();
         } else if (id == R.id.nav_alısveris) {
             setTitle("ALIŞVERİŞ LİSTESİ");
-            Fragment4 fragment=new Fragment4();
+            Alisveris_Listesi_Olustur fragment=new Alisveris_Listesi_Olustur();
             FragmentTransaction fragmentTransaction=getSupportFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.fram,fragment);
             fragmentTransaction.commit();
         } else if (id == R.id.nav_ev) {
             setTitle("EVDEKİ KULLANICILAR");
-            Fragment5 fragment=new Fragment5();
+            Evdeki_Arkadaşlarım fragment=new Evdeki_Arkadaşlarım();
             FragmentTransaction fragmentTransaction=getSupportFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.fram,fragment);
             fragmentTransaction.commit();

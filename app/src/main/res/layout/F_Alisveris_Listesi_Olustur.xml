@@ -1,0 +1,38 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.aylin.ogrencievi2.Alisveris_Listesi_Olustur">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <EditText
+        android:id="@+id/edtUrunAdi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="97dp"
+        android:ems="10"
+        android:hint="Ürün Adı"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/btnListeyeEkle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edtUrunAdi"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="42dp"
+        android:text="LİSTEYE EKLE" />
+
+    <ListView
+        android:id="@+id/listeUrun"
+        android:layout_width="600dp"
+        android:layout_height="200dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/btnListeyeEkle"
+        android:layout_marginTop="42dp"
+        android:animationCache="false" />
+</RelativeLayout>

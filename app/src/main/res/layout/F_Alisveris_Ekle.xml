@@ -1,0 +1,41 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.aylin.ogrencievi2.Alisveris_Ekle">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <EditText
+        android:id="@+id/edtAlinanUrun"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="121dp"
+        android:ems="10"
+        android:hint="Ürün Adı"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/edtUrunFiyat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/edtAlinanUrun"
+        android:layout_alignRight="@+id/edtAlinanUrun"
+        android:layout_below="@+id/edtAlinanUrun"
+        android:layout_marginTop="54dp"
+        android:ems="10"
+        android:hint="Ürün Fiyatı"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/btnEkle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edtUrunFiyat"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="61dp"
+        android:text="EKLE" />
+
+</RelativeLayout>

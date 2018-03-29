@@ -52,7 +52,8 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String email = edtUserEmail.getText().toString();
                 String password = edtUserPassword.getText().toString();
-
+                email="aylin@gmail.com";
+                password="123456";
                 if (!TextUtils.isEmpty(email) || !TextUtils.isEmpty(password)) {
 
                     LoginUser(email, password);
