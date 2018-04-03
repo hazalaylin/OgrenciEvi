@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background"
     tools:context="com.example.aylin.ogrencievi2.EvOlusturnew">
 
     <EditText
@@ -15,7 +16,7 @@
         android:layout_alignStart="@+id/edtSifreOlustur"
         android:layout_marginBottom="21dp"
         android:ems="10"
-        android:hint="Ev Adı"
+        android:hint="@string/ev_ad"
         android:inputType="textPersonName"
         tools:layout_editor_absoluteX="54dp"
         tools:layout_editor_absoluteY="200dp" />
@@ -29,7 +30,7 @@
         android:layout_alignStart="@+id/edtSifreOlustur"
         android:layout_marginBottom="38dp"
         android:ems="10"
-        android:hint="Ev Nickname"
+        android:hint="@string/ev_nickname"
         android:inputType="textPersonName"
         tools:layout_editor_absoluteX="54dp"
         tools:layout_editor_absoluteY="200dp" />
@@ -42,7 +43,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="67dp"
         android:ems="10"
-        android:hint="Şifre"
+        android:hint="@string/ifre"
         android:inputType="textPassword"
         tools:layout_editor_absoluteX="54dp"
         tools:layout_editor_absoluteY="287dp" />
@@ -51,27 +52,34 @@
         android:id="@+id/textView4"
         android:layout_width="139dp"
         android:layout_height="47dp"
-        android:text="Öğrenci evi"
+        android:layout_above="@+id/edtEvNickNameOlustur"
+        android:layout_alignEnd="@+id/edtEvNickNameOlustur"
+        android:layout_alignLeft="@+id/edtEvNickNameOlustur"
+        android:layout_alignRight="@+id/edtEvNickNameOlustur"
+        android:layout_alignStart="@+id/edtEvNickNameOlustur"
+        android:layout_marginBottom="39dp"
+        android:text="@string/ogrencievi"
+        android:textAlignment="center"
         android:textColor="@color/colorPrimary"
-        android:textSize="18sp"
+        android:textSize="30sp"
         android:textStyle="bold"
         tools:layout_editor_absoluteX="103dp"
-        tools:layout_editor_absoluteY="53dp"
-        android:layout_marginTop="33dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        tools:layout_editor_absoluteY="53dp" />
 
     <Button
         android:id="@+id/btnBaglanOlustur"
         android:layout_width="121dp"
         android:layout_height="59dp"
+        android:layout_marginBottom="102dp"
         android:background="@color/colorPrimary"
-        android:text="BAĞLAN"
+        android:text="@string/ba_lan"
+        android:textColor="@android:color/white"
         tools:layout_editor_absoluteX="115dp"
         tools:layout_editor_absoluteY="385dp"
-        android:layout_marginBottom="104dp"
         android:layout_alignParentBottom="true"
-        android:layout_alignLeft="@+id/textView4"
-        android:layout_alignStart="@+id/textView4" />
+        android:layout_alignLeft="@+id/edtSifreOlustur"
+        android:layout_alignStart="@+id/edtSifreOlustur"
+        android:layout_marginLeft="34dp"
+        android:layout_marginStart="34dp" />
 
 </RelativeLayout>

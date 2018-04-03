@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
+    android:background="@color/background"
     android:orientation="vertical"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.example.aylin.ogrencievi2.HOME"
@@ -13,10 +14,10 @@
     <FrameLayout
         android:id="@+id/fram"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/background">
 
     </FrameLayout>
-
 
 
 </LinearLayout>

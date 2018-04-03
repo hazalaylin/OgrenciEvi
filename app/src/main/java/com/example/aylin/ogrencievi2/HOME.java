@@ -24,7 +24,7 @@ public class HOME extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        /*FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -38,16 +38,16 @@ public class HOME extends AppCompatActivity
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
         toggle.syncState();
-
+*/
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
         //ilk açılacak fragment
 
         setTitle("KULLANICI BİLGİLERİ");
-        Alisveris_Ekle fragment=new Alisveris_Ekle();
-        FragmentTransaction fragmentTransaction=getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.replace(R.id.fram,fragment);
+        Alisveris_Ekle fragment = new Alisveris_Ekle();
+        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.replace(R.id.fram, fragment);
         fragmentTransaction.commit();
     }
 
@@ -72,13 +72,7 @@ public class HOME extends AppCompatActivity
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
+        // as you specify a parent activity in AndroidManifest.xml.noinspection SimplifiableIfStatement
 
         return super.onOptionsItemSelected(item);
     }
@@ -89,36 +83,41 @@ public class HOME extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-
         if (id == R.id.nav_kullanici) {
-             setTitle("ALIŞVERİŞ EKLE");
-            Alisveris_Ekle fragment=new Alisveris_Ekle();
-            FragmentTransaction fragmentTransaction=getSupportFragmentManager().beginTransaction();
-            fragmentTransaction.replace(R.id.fram,fragment);
+            setTitle("Öğrenci Evi");
+            Alisveris_Ekle fragment = new Alisveris_Ekle();
+            FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.fram, fragment);
             fragmentTransaction.commit();
         } else if (id == R.id.nav_borç) {
-            setTitle("BORÇLARIM");
-            Borçlarim fragment=new Borçlarim();
-            FragmentTransaction fragmentTransaction=getSupportFragmentManager().beginTransaction();
-            fragmentTransaction.replace(R.id.fram,fragment);
+            setTitle("Öğrenci Evi");
+            Borçlarim fragment = new Borçlarim();
+            FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.fram, fragment);
             fragmentTransaction.commit();
         } else if (id == R.id.nav_alacak) {
-            setTitle("ALACAKLARIM");
-            Alacaklarim fragment=new Alacaklarim();
-            FragmentTransaction fragmentTransaction=getSupportFragmentManager().beginTransaction();
-            fragmentTransaction.replace(R.id.fram,fragment);
+            setTitle("Öğrenci Evi");
+            Alacaklarim fragment = new Alacaklarim();
+            FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.fram, fragment);
             fragmentTransaction.commit();
         } else if (id == R.id.nav_alısveris) {
-            setTitle("ALIŞVERİŞ LİSTESİ");
-            Alisveris_Listesi_Olustur fragment=new Alisveris_Listesi_Olustur();
-            FragmentTransaction fragmentTransaction=getSupportFragmentManager().beginTransaction();
-            fragmentTransaction.replace(R.id.fram,fragment);
+            setTitle("Öğrenci Evi");
+            Alisveris_Listesi_Olustur fragment = new Alisveris_Listesi_Olustur();
+            FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.fram, fragment);
             fragmentTransaction.commit();
         } else if (id == R.id.nav_ev) {
-            setTitle("EVDEKİ KULLANICILAR");
-            Evdeki_Arkadaşlarım fragment=new Evdeki_Arkadaşlarım();
-            FragmentTransaction fragmentTransaction=getSupportFragmentManager().beginTransaction();
-            fragmentTransaction.replace(R.id.fram,fragment);
+            setTitle("Öğrenci Evi");
+            Evdeki_Arkadaşlarım fragment = new Evdeki_Arkadaşlarım();
+            FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.fram, fragment);
+            fragmentTransaction.commit();
+        } else if (id == R.id.nav_ayarlar) {
+            setTitle("Öğrenci Evi");
+            Ayarlar fragment = new Ayarlar();
+            FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.fram, fragment);
             fragmentTransaction.commit();
         }
 

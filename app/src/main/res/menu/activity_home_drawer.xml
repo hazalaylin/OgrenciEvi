@@ -7,25 +7,29 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_kullanici"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="Kullanıcı Bilgileri" />
+            android:icon="@drawable/alisveris_ekle"
+            android:title="Alışveriş Ekle" />
         <item
             android:id="@+id/nav_borç"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@drawable/ic_expand_more_black_24dp"
             android:title="Borçlarım" />
         <item
             android:id="@+id/nav_alacak"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/ic_expand_less_black_24dp"
             android:title="Alacaklarım" />
         <item
             android:id="@+id/nav_alısveris"
-            android:icon="@drawable/ic_menu_manage"
+            android:icon="@drawable/ic_edit_black_24dp"
             android:title="Alışveriş Listesi Oluştur" />
         <item
             android:id="@+id/nav_ev"
-            android:icon="@drawable/ic_menu_manage"
+            android:icon="@drawable/ic_supervisor_account_black_24dp"
             android:title="Evdeki Kullanıcılar" />
 
+        <item
+            android:id="@+id/nav_ayarlar"
+            android:icon="@drawable/ic_settings_black_24dp"
+            android:title="Kullanıcı Ayarları" />
     </group>
 
 

@@ -61,6 +61,7 @@ public class EveBaglan extends AppCompatActivity {
         //nickname sifre kontorlu
         //dogruysa baglan ve yeni uid ile kullanıcıyı kullanıcılar altına ekle
         Db = FirebaseDatabase.getInstance();
+
         DatabaseReference homeRef = Db.getReference("Evler");
         Query q = homeRef.orderByChild("NickName").equalTo(Nick);
         q.addListenerForSingleValueEvent(valueListener());
@@ -89,6 +90,8 @@ public class EveBaglan extends AppCompatActivity {
                         //kullanıcı kullanıcılara eklenecek
                         //DatabaseReference ref = Db.getReference("Evler/"+key+"/Kullanicilar/"+uid);
                         String Address="Evler/"+key+"/Kullanicilar/"+uid;
+                        SData.SetKey(key);
+                        SData.SetNick(edtEvNickNameBaglan.getText().toString());
                         getUserDetails(Address);
                         //kullanıcı adı soyadı ve emaili cekilecek
 
@@ -127,13 +130,15 @@ public class EveBaglan extends AppCompatActivity {
                     email = user.getEmail();
 
                 }
-                Evdeki_Arkadaşlarım.Users usr = dataSnapshot.getValue(Evdeki_Arkadaşlarım.Users.class);
+                Users usr = dataSnapshot.getValue(Users.class);
 
                 DatabaseReference DbRefForHomeUsers =Db.getReference(Address);
-                KullaniciModel KM=new KullaniciModel(usr.getAd(),email,usr.getSoyad());
+                KullaniciModel KM=new KullaniciModel(usr.getAd(),"0",usr.getSoyad());
                 DbRefForHomeUsers.setValue(KM);
                 //ana sayfaya yönlendir
                 Intent mainIntent = new Intent(EveBaglan.this, HOME.class);
+
+                //mainIntent.putExtra("NickName",edtEvNickNameBaglan.getText().toString());
                 startActivity(mainIntent);
                 finish();
             }

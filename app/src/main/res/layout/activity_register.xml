@@ -1,90 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background"
     tools:context="com.example.aylin.ogrencievi2.RegisterActivity">
 
-    <EditText
-        android:id="@+id/edtMailRegister"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="72dp"
-        android:layout_marginStart="72dp"
-        android:layout_marginTop="102dp"
-        android:ems="10"
-        android:hint="EMail giriniz"
-        android:inputType="textEmailAddress"
-        android:textColorLink="@color/colorPrimary" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <EditText
-        android:id="@+id/edtNameRegister"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/edtMailRegister"
-        android:layout_alignLeft="@+id/edtMailRegister"
-        android:layout_alignRight="@+id/edtMailRegister"
-        android:layout_alignStart="@+id/edtMailRegister"
-        android:layout_below="@+id/edtMailRegister"
-        android:layout_marginTop="52dp"
-        android:ems="10"
-        android:hint="Ad Giriniz"
-        android:inputType="textPersonName"
-        android:textColorLink="@color/colorPrimary" />
+        <EditText
+            android:id="@+id/edtMailRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="72dp"
+            android:layout_marginStart="72dp"
+            android:layout_marginTop="102dp"
+            android:ems="10"
+            android:hint="EMail giriniz"
+            android:inputType="textEmailAddress"
+            android:textColorLink="@color/colorPrimary" />
 
-    <EditText
-        android:id="@+id/edtSoyadRegister"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/edtNameRegister"
-        android:layout_alignStart="@+id/edtNameRegister"
-        android:layout_below="@+id/edtNameRegister"
-        android:layout_marginTop="42dp"
-        android:ems="10"
-        android:hint="Soyad Giriniz"
-        android:inputType="textPersonName"
-        android:textColorLink="@color/colorPrimary" />
+        <EditText
+            android:id="@+id/edtNameRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/edtMailRegister"
+            android:layout_alignLeft="@+id/edtMailRegister"
+            android:layout_alignRight="@+id/edtMailRegister"
+            android:layout_alignStart="@+id/edtMailRegister"
+            android:layout_below="@+id/edtMailRegister"
+            android:layout_marginTop="52dp"
+            android:ems="10"
+            android:hint="Ad Giriniz"
+            android:inputType="textPersonName"
+            android:textColorLink="@color/colorPrimary" />
 
-    <EditText
-        android:id="@+id/edtPasswordRegister"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/edtSoyadRegister"
-        android:layout_alignRight="@+id/edtSoyadRegister"
-        android:layout_below="@+id/edtSoyadRegister"
-        android:layout_marginTop="38dp"
-        android:ems="10"
-        android:hint="Şifre Giriniz"
-        android:inputType="textPassword"
-        android:textColorLink="@color/colorPrimary" />
+        <EditText
+            android:id="@+id/edtSoyadRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/edtNameRegister"
+            android:layout_alignStart="@+id/edtNameRegister"
+            android:layout_below="@+id/edtNameRegister"
+            android:layout_marginTop="42dp"
+            android:ems="10"
+            android:hint="Soyad Giriniz"
+            android:inputType="textPersonName"
+            android:textColorLink="@color/colorPrimary" />
 
-    <Button
-        android:id="@+id/btnRegister"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/edtPasswordRegister"
-        android:layout_alignLeft="@+id/edtPasswordRegister"
-        android:layout_alignParentBottom="true"
-        android:layout_alignRight="@+id/edtPasswordRegister"
-        android:layout_alignStart="@+id/edtPasswordRegister"
-        android:layout_marginBottom="52dp"
-        android:background="@color/colorPrimary"
-        android:text="KAYIT OL"
-        android:textColorLink="@color/colorPrimary" />
+        <EditText
+            android:id="@+id/edtPasswordRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/edtSoyadRegister"
+            android:layout_alignRight="@+id/edtSoyadRegister"
+            android:layout_below="@+id/edtSoyadRegister"
+            android:layout_marginTop="38dp"
+            android:ems="10"
+            android:hint="Şifre Giriniz"
+            android:inputType="textPassword"
+            android:textColorLink="@color/colorPrimary" />
 
-    <TextView
-        android:id="@+id/ogrenciEvi"
-        android:layout_width="200dp"
-        android:layout_height="40dp"
-        android:layout_alignEnd="@+id/edtMailRegister"
-        android:layout_alignParentTop="true"
-        android:layout_alignRight="@+id/edtMailRegister"
-        android:layout_marginTop="32dp"
-        android:text="Öğrenci Evi"
-        android:textColor="@color/colorPrimary"
-        android:textSize="24sp" />
-</RelativeLayout>
+        <Button
+            android:id="@+id/btnRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/edtPasswordRegister"
+            android:layout_alignLeft="@+id/edtPasswordRegister"
+            android:layout_alignRight="@+id/edtPasswordRegister"
+            android:layout_alignStart="@+id/edtPasswordRegister"
+            android:layout_below="@+id/edtPasswordRegister"
+            android:layout_marginTop="40dp"
+            android:background="@color/colorPrimary"
+            android:text="KAYIT OL"
+            android:textColor="@android:color/white"
+            android:textColorLink="@color/colorPrimary" />
+
+        <TextView
+            android:id="@+id/ogrenciEvi"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_alignEnd="@+id/edtMailRegister"
+            android:layout_alignLeft="@+id/edtMailRegister"
+            android:layout_alignParentTop="true"
+            android:layout_alignRight="@+id/edtMailRegister"
+            android:layout_alignStart="@+id/edtMailRegister"
+            android:layout_marginTop="32dp"
+            android:text="Öğrenci Evi"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+</ScrollView>

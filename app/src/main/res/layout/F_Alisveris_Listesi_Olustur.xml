@@ -2,6 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background"
     tools:context="com.example.aylin.ogrencievi2.Alisveris_Listesi_Olustur">
 
     <!-- TODO: Update blank fragment layout -->
@@ -21,10 +22,15 @@
         android:id="@+id/btnListeyeEkle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/edtUrunAdi"
+        android:layout_alignLeft="@+id/edtUrunAdi"
+        android:layout_alignRight="@+id/edtUrunAdi"
+        android:layout_alignStart="@+id/edtUrunAdi"
         android:layout_below="@+id/edtUrunAdi"
-        android:layout_centerHorizontal="true"
         android:layout_marginTop="42dp"
-        android:text="LİSTEYE EKLE" />
+        android:background="@color/colorAccent"
+        android:text="LİSTEYE EKLE"
+        android:textColor="@android:color/white" />
 
     <ListView
         android:id="@+id/listeUrun"

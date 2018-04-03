@@ -46,15 +46,18 @@ public class Alisveris_Listesi_Olustur extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        mainView=inflater.inflate(R.layout.F_Alisveris_Listesi_Olustur, container, false);
+        mainView=inflater.inflate(R.layout.f_alisveris_listesi_olustur, container, false);
 
-        final EditText edtUrunAdi=(EditText)mainView.findViewById(R.id.edtUrunAdi);
-        final ListView listeUrun=(ListView)mainView.findViewById(R.id.listeUrun);
+        edtUrunAdi=(EditText)mainView.findViewById(R.id.edtUrunAdi);
+        listeUrun=(ListView)mainView.findViewById(R.id.listeUrun);
         Button btnListeyeEkle=(Button)mainView.findViewById(R.id.btnListeyeEkle);
         String[] items={"Apple","Banana","Grape"};
+
         arrayList=new ArrayList<>(Arrays.asList(items));
         adapter=new ArrayAdapter<String>(getActivity(),R.layout.list_item,R.id.txtitem,arrayList);
         listeUrun.setAdapter(adapter);
+
+        listeyiGöster();
 
         btnListeyeEkle.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -63,7 +66,7 @@ public class Alisveris_Listesi_Olustur extends Fragment {
                 arrayList.add(newItem);
                 adapter.notifyDataSetChanged();
                 listeyeEkle();
-                listeyiGöster();
+
             }
         });
 
@@ -75,20 +78,22 @@ public class Alisveris_Listesi_Olustur extends Fragment {
 
     public void listeyeEkle()//nutton click bunu calıstıracak
     {
-        String evNickName="NickName";//alan doldurulacak
+        String evNickName=SData.GetNick();//alan doldurulacak
         Db = FirebaseDatabase.getInstance();
         DatabaseReference DbRef = Db.getReference("alinacaklar/"+evNickName);
         String key = DbRef.push().getKey();
         DatabaseReference InserStatement = Db.getReference("alinacaklar/"+evNickName+"/"+key);
-        HashMap<String, EditText> UrunMap = new HashMap<>();
-        UrunMap.put("ad",edtUrunAdi);
+        HashMap<String, String> UrunMap = new HashMap<>();
+        UrunMap.put("UrunAd",edtUrunAdi.getText().toString());
+        UrunMap.put("Fiyat","0");
+        UrunMap.put("AlanKisi","0");
         InserStatement.setValue(UrunMap);
 
     }
     public void listeyiGöster()
     {
 
-        String evNickName="";//alan doldurulacak
+        String evNickName=SData.GetNick();//alan doldurulacak
         Db = FirebaseDatabase.getInstance();
         DatabaseReference UsersRef = Db.getReference("alinacaklar/"+evNickName);
         UsersRef.addValueEventListener(new ValueEventListener() {
@@ -96,11 +101,16 @@ public class Alisveris_Listesi_Olustur extends Fragment {
             public void onDataChange(DataSnapshot dataSnapshot) {
                 // This method is called once with the initial value and again
                 // whenever data at this location is updated.
+
                 for(DataSnapshot gelenler : dataSnapshot.getChildren())
                 {
                     String key = gelenler.getKey();
-                    String ad=gelenler.child("ad").getValue(String.class);
+                    String ad=gelenler.child("UrunAd").getValue(String.class);
 
+                    String ab="B";
+
+                    arrayList.add(ad);
+                    adapter.notifyDataSetChanged();
                 }
             }
 

@@ -100,10 +100,12 @@ public class EvOlusturnew extends AppCompatActivity {
                      email = user.getEmail();
 
                 }
-                Evdeki_Arkadaşlarım.Users usr = dataSnapshot.getValue(Evdeki_Arkadaşlarım.Users.class);
+               Users usr = dataSnapshot.getValue(Users.class);
 
                 DatabaseReference DbRefForHomeUsers =Db.getReference(Address);
                 KullaniciModel KM=new KullaniciModel(usr.getAd(),email,usr.getSoyad());
+                SData.SetNick(edtEvNickNameOlustur.getText().toString());
+
                 Intent mainIntent = new Intent(EvOlusturnew.this, HOME.class);
                 startActivity(mainIntent);
                 
@@ -146,6 +148,7 @@ public class EvOlusturnew extends AppCompatActivity {
         EvModel Ev  =new EvModel(evAd,evSifre,evNickName);
         DbRefForInsert.setValue(Ev);
         DatabaseReference DbRefForHomeUsersKey =Db.getReference("Evler/"+key+"/Kullanicilar");
+        SData.SetKey(key);
         String UserKey = DbRefForHomeUsersKey.push().getKey();
         String uid="";
 

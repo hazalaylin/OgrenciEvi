@@ -2,6 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background"
     tools:context="com.example.aylin.ogrencievi2.Alisveris_Ekle">
 
     <!-- TODO: Update blank fragment layout -->
@@ -21,21 +22,26 @@
         android:id="@+id/edtUrunFiyat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/edtAlinanUrun"
-        android:layout_alignRight="@+id/edtAlinanUrun"
+        android:layout_alignLeft="@+id/edtAlinanUrun"
+        android:layout_alignStart="@+id/edtAlinanUrun"
         android:layout_below="@+id/edtAlinanUrun"
-        android:layout_marginTop="54dp"
+        android:layout_marginTop="31dp"
         android:ems="10"
         android:hint="Ürün Fiyatı"
-        android:inputType="textPersonName" />
+        android:inputType="number" />
 
     <Button
-        android:id="@+id/btnEkle"
+        android:id="@+id/btnAlisverisEkle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/edtUrunFiyat"
+        android:layout_alignLeft="@+id/edtUrunFiyat"
+        android:layout_alignRight="@+id/edtUrunFiyat"
+        android:layout_alignStart="@+id/edtUrunFiyat"
         android:layout_below="@+id/edtUrunFiyat"
-        android:layout_centerHorizontal="true"
         android:layout_marginTop="61dp"
-        android:text="EKLE" />
+        android:background="@color/colorAccent"
+        android:text="EKLE"
+        android:textColor="@android:color/white" />
 
 </RelativeLayout>

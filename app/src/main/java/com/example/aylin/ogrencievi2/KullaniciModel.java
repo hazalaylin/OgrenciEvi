@@ -5,15 +5,15 @@ package com.example.aylin.ogrencievi2;
  */
 
 public class KullaniciModel {
-    public String Ad,Mail,Soyad;
+    public String Ad,Borc,Soyad;
     public  KullaniciModel()
     {
 
     }
-    public KullaniciModel(String pAd,String pMail,String pSoyad)
+    public KullaniciModel(String pAd,String pBorc,String pSoyad)
     {
         this.Ad=pAd;
         this.Soyad=pSoyad;
-        this.Mail=pMail;
+        this.Borc=pBorc;
     }
 }

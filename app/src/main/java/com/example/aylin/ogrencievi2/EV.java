@@ -17,7 +17,7 @@ public class EV extends AppCompatActivity {
 
     private EditText edtUserEmail;
     private EditText edtUserPassword;
-    private Button BtnEvOlustur;
+    private Button btnEvOlustur;
     private Button BtnEveBaglan;
 
 
@@ -26,10 +26,10 @@ public class EV extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ev);
 
-        BtnEvOlustur=(Button)findViewById(R.id.BtnEvOlustur);
+        btnEvOlustur=(Button)findViewById(R.id.btnEvOlustur);
         BtnEveBaglan=(Button)findViewById(R.id.BtnEveBaglan);
 
-        BtnEvOlustur.setOnClickListener(new View.OnClickListener() {
+        btnEvOlustur.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent mainIntent=new Intent(EV.this,EvOlusturnew.class);

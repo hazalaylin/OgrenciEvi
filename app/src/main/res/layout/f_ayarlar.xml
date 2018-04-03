@@ -1,0 +1,110 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".SData$f_ayarlar">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/edt_kulanici_ad"
+        android:layout_alignEnd="@+id/edt_kulanici_ad"
+        android:layout_alignLeft="@+id/edt_kulanici_ad"
+        android:layout_alignRight="@+id/edt_kulanici_ad"
+        android:layout_alignStart="@+id/edt_kulanici_ad"
+        android:layout_marginBottom="26dp"
+        android:text="Kullanıcı Ayarları"
+        android:textColor="@color/colorAccent"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:ems="10"
+        android:hint="Parolanız"
+        android:inputType="textPassword" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editText"
+        android:layout_alignStart="@+id/editText"
+        android:layout_below="@+id/editText"
+        android:layout_marginTop="26dp"
+        android:ems="10"
+        android:hint="Parola Tekrar"
+        android:inputType="textPassword" />
+
+    <EditText
+        android:id="@+id/edt_kulanici_ad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/edt_kullanici_soyad"
+        android:layout_alignLeft="@+id/edt_kullanici_soyad"
+        android:layout_alignStart="@+id/edt_kullanici_soyad"
+        android:layout_marginBottom="19dp"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/edt_kullanici_soyad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/editText"
+        android:layout_alignLeft="@+id/editText"
+        android:layout_alignStart="@+id/editText"
+        android:layout_marginBottom="86dp"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/editText"
+        android:layout_alignEnd="@+id/editText"
+        android:layout_alignLeft="@+id/editText"
+        android:layout_alignRight="@+id/editText"
+        android:layout_alignStart="@+id/editText"
+        android:layout_marginBottom="10dp"
+        android:text="Parolanız"
+        android:textColor="@color/colorAccent"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btn_Ayarlar_Kaydet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/editText2"
+        android:layout_alignLeft="@+id/editText2"
+        android:layout_alignRight="@+id/editText2"
+        android:layout_alignStart="@+id/editText2"
+        android:layout_below="@+id/editText2"
+        android:layout_marginTop="69dp"
+        android:background="@color/colorPrimary"
+        android:text="KAYDET"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/editText2"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:text="Not:Parolanızı değiştirmek istemiyorsanız parola alanlarını boş bırakınız."
+        android:textColor="?android:attr/textColorLinkInverse" />
+</RelativeLayout>
